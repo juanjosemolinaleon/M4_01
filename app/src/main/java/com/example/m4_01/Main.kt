@@ -13,7 +13,7 @@ fun main() {
     val concatenado1 ="El saludo es: $palabra1"
     println(concatenado1)
 
-    val concatenado2 ="El largo de la palabra es: ${palabra1.trim().length}"
+    val concatenado2 ="El largo de la palabra es: ${palabra1.replace(" ","").length}"
     println(concatenado2)
 }
 
