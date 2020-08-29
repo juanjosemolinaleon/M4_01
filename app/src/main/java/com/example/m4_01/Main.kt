@@ -48,6 +48,20 @@ fun main() {
     println(suma(20,30))
 
     printAll("Mensaje 1","Mensaje 2","Mensaje 3")
+
+    printWithTextPrefix("Hola", "Hallo",prefix = "Saludos")
+
+    val denominacion = "Juan"
+    denominacion.saludo()
+    denominacion.despedida()
+    denominacion.saludos()
+    denominacion.despedidas()
+
+
+
+
+
+
 }
 
 fun getNombreCompleto():String{
@@ -76,5 +90,25 @@ fun suma(x: Int, y: Int):Int{
 }
 
 fun printAll(vararg message: String){
-    for(m in message) println(m)
+    for(parametros in message) println(parametros)
+}
+
+fun printWithTextPrefix(vararg message: String, prefix: String){
+    for (elemento in message) println("$prefix $elemento")
+}
+
+fun String.saludo(){
+    println("Hola")
+}
+
+fun String.despedida(){
+    println("Adios")
+}
+
+fun String.saludos(){
+    println("$this Hola")
+}
+
+fun String.despedidas(){
+    println("$this Adios")
 }
