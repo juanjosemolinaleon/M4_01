@@ -64,14 +64,15 @@ fun main() {
     println(contact.id)
     println(contact.e_mail)
 
+    val perrito = Dog()
+        perrito.makeNoise() // se puede hacer así
+    val perritos = Dog().makeNoise() // o así
+
+    val airedaleTerrier = AiredaleTerrier().makeNoise()
+    val dogo = Dogo().makeNoise()
 
 
-
-
-
-
-
-
+    
 
 }
 
@@ -136,3 +137,21 @@ class Person(mText: String)
 class Customer
 
 class Contact(val id: Int, var e_mail: String)
+
+open class Dog{
+    open fun makeNoise(){
+        println("wow wow")
+    }
+}
+
+class AiredaleTerrier:Dog(){
+    override fun makeNoise() {
+        super.makeNoise()
+    }
+}
+
+class Dogo:Dog(){
+    override fun makeNoise() {
+        println("Wrof Wrof")
+    }
+}
