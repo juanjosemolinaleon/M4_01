@@ -44,6 +44,10 @@ fun main() {
     printMessage(mensaje)
 
     printMessageWithPrefix("Juan José Molina León")
+
+    println(suma(20,30))
+
+    printAll("Mensaje 1","Mensaje 2","Mensaje 3")
 }
 
 fun getNombreCompleto():String{
@@ -65,4 +69,12 @@ fun printMessage(message: String):Unit{
 fun printMessageWithPrefix(nombreEstud: String, prefix: String = "Estudiante :"){
     println("$prefix $nombreEstud")
 
+}
+
+fun suma(x: Int, y: Int):Int{
+    return x+y
+}
+
+fun printAll(vararg message: String){
+    for(m in message) println(m)
 }
