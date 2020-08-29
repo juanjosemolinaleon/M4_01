@@ -1,5 +1,8 @@
 package com.example.m4_01
 
+import android.net.IpPrefix
+import android.webkit.ConsoleMessage
+
 fun main() {
 
 // Ejercicio 1
@@ -36,6 +39,11 @@ fun main() {
     imprimirNombreApellidoEdad("Andrés","Molina", 17)
     imprimirNombreApellidoEdad("Martín","Molina", 19)
     imprimirNombreApellidoEdad("Irina","Molina", 9)
+
+    val mensaje = "Esta es una prueba"
+    printMessage(mensaje)
+
+    printMessageWithPrefix("Juan José Molina León")
 }
 
 fun getNombreCompleto():String{
@@ -48,4 +56,13 @@ fun getEdad():Int{
 
 fun imprimirNombreApellidoEdad(nombre:String, apellido:String, edad:Int){
     println("Mi nombre es $nombre $apellido y tengo $edad años")
+}
+
+fun printMessage(message: String):Unit{
+    println(message)
+}
+
+fun printMessageWithPrefix(nombreEstud: String, prefix: String = "Estudiante :"){
+    println("$prefix $nombreEstud")
+
 }
