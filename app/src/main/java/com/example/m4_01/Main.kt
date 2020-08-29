@@ -56,6 +56,17 @@ fun main() {
     denominacion.despedida()
     denominacion.saludos()
     denominacion.despedidas()
+    "Imprime lo que pongas acá, por estar llamando al método 'imprimir'".imprimir() // el 'this' mágico
+
+    var customer = Customer()
+    var contact = Contact(10, "molinaleon@gmail.com")
+    println("${contact.id} ${contact.e_mail}")
+    println(contact.id)
+    println(contact.e_mail)
+
+
+
+
 
 
 
@@ -106,9 +117,22 @@ fun String.despedida(){
 }
 
 fun String.saludos(){
-    println("$this Hola")
+    println("$this Hola") // el "this" lo que hace es aplicar lo que hay antes del método,
+    // que en este caso es "denominacion", por eso imprime el nombre metido en la variable.
 }
 
 fun String.despedidas(){
     println("$this Adios")
 }
+
+fun String.imprimir(){
+    println(this)
+}
+
+class NewClass
+
+class Person(mText: String)
+
+class Customer
+
+class Contact(val id: Int, var e_mail: String)
